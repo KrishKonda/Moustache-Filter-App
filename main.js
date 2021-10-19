@@ -14,7 +14,7 @@ poseNet.on('pose',gotPoses);
 }
 function draw(){
 image(video,0,0,300,300);
-image(moustache,noseX,noseY,100,30);
+image(moustache,noseX-45,noseY-5,100,30);
 stroke(0,0,0);
 fill(0,0,0);
 }
@@ -30,6 +30,6 @@ function gotPoses(results){
         noseY=results[0].pose.nose.y;
         console.log("x axis="+results[0].pose.nose.x);
         console.log("y axis="+results[0].pose.nose.y);
-        console.log(result);
+        console.log(results);
     }
 }
